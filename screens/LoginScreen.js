@@ -18,7 +18,7 @@ export default class Login extends React.Component {
       {
          this.props.navigation.navigate('Home');
       }
-      else if (this.state.userName != "David" || this.state.userPass != "Mason1144")
+      else if (this.state.userName != "David.mason" || this.state.userPass != "Mason1144")
       {
           Alert.alert("Please Enter Correct Username & Password To Login")
       }

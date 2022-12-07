@@ -2,14 +2,13 @@ import React from 'react';
 import { StyleSheet, Text, View, ImageBackground, TextInput, TouchableOpacity, ScrollView, FlatList } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-export default class MonitorRecords extends React.Component{
-
+export default class MonitorRecords extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       data: [],
-      searchPatient: '0'
+      searchPatient: ""
     }
   }
 
@@ -18,80 +17,60 @@ export default class MonitorRecords extends React.Component{
   }
 
   fetchPatientsData = async () => {
-    fetch("https://enterprise-healthrecords-api.herokuapp.com/patients")
+    fetch("http://192.168.0.194:5000/patients")
       .then(response => response.json())
-      .then((jsonResponse) => { this.setState({ data: jsonResponse })})
+      .then((jsonResponse) => { this.setState({ data: jsonResponse }) })
       .catch(error => console.log(error))
   }
 
-  addTest ()
-    {
-      this.props.navigation.navigate('AddTest', {patientId: this.state.searchPatient})
-    }
+  monitorPatient(patId, patientFName, patientLName, patientWard, patientId, patientAge, patientGender, patientDob, patientDoc,
+    patientWeight, patientPhoneNumber, patientAddress, patientReport) {
+    this.props.navigation.navigate('MonitorPatient', { selectedId: patId, pFirstName: patientFName, pLastName: patientLName, 
+      pWard: patientWard, pId: patientId, pAge: patientAge, pGender: patientGender, pDob: patientDob, pDoc: patientDoc, 
+    pWeight: patientWeight, pPhoneNumber: patientPhoneNumber, pAddress: patientAddress, pReport: patientReport})
+  }
 
   renderItem = (data) => {
-    if (data.item.patientId == this.state.searchPatient) {
+    if (data.item.firstName === this.state.searchPatient || data.item.lastName === this.state.searchPatient) {
       return (
         <ScrollView>
-          <View>
-            <Text style={styles.patientId}>PATIENT - {data.item.patientId}</Text>
-            <Text style={styles.patientName}>{data.item.firstName} {data.item.lastName}</Text>
-            <Text style={styles.textStyle}>AGE: {data.item.age} / {data.item.gender}</Text>
-            <Text style={styles.textStyle}>WEIGHT: {data.item.weight}</Text>
-            <Text style={styles.textStyle}>BLOOD PRESSURE: {data.item.Bp}</Text>
-            <Text style={styles.textStyle}>RESPIRATORY RATE: {data.item.Rrate}</Text>
-            <Text style={styles.textStyle}>BLOOD OXYGEN LEVEL: {data.item.BLO}</Text>
-            <Text style={styles.textStyle}>HEARTBEAT RATE: {data.item.HBrate}</Text>
-            <Text style={styles.textStyle}>REQUIRED TESTS:</Text>
-            <Text style={styles.textStyle}>
-              *BLOOD SUGAR LEVEL →
-              <Text style={styles.testStatus}> Pending</Text>
-            </Text>
-            <Text style={styles.textStyle}>
-              *XRAY →
-              <Text style={styles.testStatus}> Completed</Text>
-            </Text>
-            <Text style={styles.textStyle}>REPORT: {data.item.report}</Text>
-            <Text style={styles.textStyle}>ASSIGNED ROOM: {data.item.ward}</Text>
-            <Text style={styles.textStyle}>ADDMITED ON: {data.item.createdAt}</Text>
-            <Text style={styles.textStyle}>LAST UPDATED: {data.item.updatedAt}</Text>
-          </View>
+          <TouchableOpacity
+            onPress={() => this.monitorPatient(data.item._id, data.item.firstName, data.item.lastName, data.item.ward,
+            data.item.patientId, data.item.age, data.item.gender, data.item.dateOfBirth, data.item.doctor, data.item.weight, data.item.phoneNumber,
+            data.item.address, data.item.report)}>
+            <View style={styles.recordInfo}>
+              <Text style={styles.patientId}>PATIENT - {data.item.patientId}</Text>
+              <Text style={styles.patientName}>{data.item.firstName} {data.item.lastName}</Text>
+              <Text style={styles.textStyle}>REPORT: {data.item.report}</Text>
+              <Text style={styles.textStyle}>ADDMITED ON: {data.item.createdAt}</Text>
+            </View>
+          </TouchableOpacity>
         </ScrollView>
       )
     }
   }
 
-  render(){
+  render() {
     return (
       <ImageBackground source={require('../assets/background_image.png')} style={styles.container}>
         <Text style={styles.heading}>MONITOR RECORDS:</Text>
-        <Text style={styles.numberLabel}>ENTER PATIENT NO.:</Text>
+        <Text style={styles.numberLabel}>ENTER PATIENT NAME:</Text>
         <View style={styles.searchBar}>
           <TextInput
             style={styles.input}
-            placeholder='101101'
+            placeholder='Richard Louis'
+            value={this.state.searchPatient}
             onChangeText={(text) => this.setState({ searchPatient: text })}>
           </TextInput>
           <TouchableOpacity style={styles.searchIcon}>
             <Ionicons name="search" size={24} color="#414142" />
           </TouchableOpacity>
         </View>
-        <View style={styles.recordInfo}>
+        <View>
           <FlatList
             data={this.state.data}
             keyExtractor={item => item.patientId}
             renderItem={item => this.renderItem(item)} />
-          <View style={styles.buttonGroup}>
-            <TouchableOpacity
-              style={styles.buttonStyle}
-              onPress={() => this.addTest()}>
-              <Text style={{ color: '#D4DF38' }}>ADD TESTS</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.buttonStyle}>
-              <Text style={{ color: '#D4DF38' }}>ADD/UPDATE INFO</Text>
-            </TouchableOpacity>
-          </View>
         </View>
         <View style={styles.footer}></View>
       </ImageBackground>
@@ -144,7 +123,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#D4DF38',
     marginTop: 20,
     marginLeft: 10,
-    height: 520,
+    height: 140,
     width: 360,
     borderRadius: 10,
     paddingLeft: 5,

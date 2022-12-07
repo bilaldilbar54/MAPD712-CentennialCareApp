@@ -1,57 +1,127 @@
 import React from 'react';
 import { StyleSheet, Text, View, ImageBackground, TextInput, TouchableOpacity, Button, ScrollView } from 'react-native';
-import {useRoute} from '@react-navigation/native';
 
-export default function AddPatientTest() {
+export default class AddPatientTest extends React.Component {
 
-    const route = useRoute();
-    return (
-        <View>
-            <ImageBackground source={require('../assets/background_image.png')} style={styles.container}>
-                <Text style={styles.heading}>PATIENT TESTS:</Text>
-                <ScrollView>
-                    <Text style={styles.inputLabel}>PATIENT ID:</Text>
-                    <TextInput style={styles.input1}> PTN - {route.params?.patientId}</TextInput>
-                    <View style={styles.inputStyle}>
+    constructor(props) {
+        super(props);
+        const { route } = this.props;
+
+        this.state = {
+            patientId: route.params.selectedId,
+            firstName: route.params.fName,
+            lastName: route.params.lName,
+            ward: route.params.wardd,
+            nurseName: '',
+            diastolicVal: 'Pending',
+            systolicVal: 'Pending',
+            respRateVal: 'Pending',
+            bloodOxyLvlVal: 'Pending',
+            heartBeatRateVal: 'Pending'
+        }
+    }
+
+    postPatientsTest = async () => {
+        fetch(`http://192.168.0.194:5000/patients/${this.state.patientId}/tests`, {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            },
+
+            body: JSON.stringify({
+                firstName: this.state.firstName,
+                lastName: this.state.lastName,
+                ward: this.state.ward,
+                nurseName: this.state.nurseName,
+                diastolic: this.state.diastolicVal,
+                systolic: this.state.systolicVal,
+                respiratoryRate: this.state.respRateVal,
+                bloodOxygenLevel: this.state.bloodOxyLvlVal,
+                heartBeatRate: this.state.heartBeatRateVal,
+            })
+        });
+    }
+
+    submitTest = () => {
+        this.postPatientsTest()
+        this.clearData()
+        this.props.navigation.navigate('MonitorRecords')
+    }
+
+    clearData = () => {
+        this.setState({ nurseName: '' })
+        this.setState({ diastolicVal: '' })
+        this.setState({ systolicVal: '' })
+        this.setState({ respRateVal: '' })
+        this.setState({ bloodOxyLvlVal: '' })
+        this.setState({ heartBeatRateVal: '' })
+    }
+
+    render() {
+        return (
+            <View>
+                <ImageBackground source={require('../assets/background_image.png')} style={styles.container}>
+                    <Text style={styles.heading}>PATIENT TESTS ADDITION:</Text>
+                    <View style={{ marginTop: 30 }}>
+                        <View>
+                            <Text style={styles.inputLabel}>Enter Nurse Name:</Text>
+                            <TextInput
+                                style={styles.input2}
+                                placeholder='E.g. Nancy Carter'
+                                onChangeText={(text) => this.setState({ nurseName: text })}>
+                            </TextInput>
+                        </View>
                         <Text style={styles.inputLabel}>BLOOD PRESSURE:</Text>
+                        <View style={styles.inputStyle1}>
+                            <TextInput
+                                style={styles.input1}
+                                placeholder='Systolic Pressure'
+                                onChangeText={(text) => this.setState({ systolicVal: text })}>
+                            </TextInput>
+                            <TextInput
+                                style={styles.input1}
+                                placeholder='Diastolic Pressure'
+                                onChangeText={(text) => this.setState({ diastolicVal: text })}>
+                            </TextInput>
+                        </View>
+                        <View style={styles.inputStyle}>
+                            <View>
+                                <Text style={styles.inputLabel}>RESPIRATORY RATE:</Text>
+                                <TextInput
+                                    style={styles.input2}
+                                    placeholder='Respiratory Rate (X/min)'
+                                    onChangeText={(text) => this.setState({ respRateVal: text })}>
+                                </TextInput>
+                            </View>
+                            <View>
+                                <Text style={styles.inputLabel}>BLOOD OXYGEN LEVEL:</Text>
+                                <TextInput
+                                    style={styles.input2}
+                                    placeholder='Blood Oxygen Level (X%)'
+                                    onChangeText={(text) => this.setState({ bloodOxyLvlVal: text })}>
+                                </TextInput>
+                            </View>
+                        </View>
+                        <Text style={styles.inputLabel}>HEARTBEAT RATE:</Text>
                         <TextInput
-                            style={styles.input2}>
+                            style={styles.input2}
+                            placeholder='Heartbeat Rate (X/min)'
+                            onChangeText={(text) => this.setState({ heartBeatRateVal: text })}>
                         </TextInput>
-                    </View>
-                    <View style={styles.inputStyle}>
-                        <View>
-                            <Text style={styles.inputLabel}>RESPIRATORY RATE:</Text>
-                            <TextInput
-                                style={styles.input2}>
-                            </TextInput>
+                        <View style={styles.buttonGroup}>
+                            <TouchableOpacity
+                                style={styles.buttonStyle}
+                                onPress={() => this.submitTest()}>
+                                <Text style={{ color: '#414142' }}>SUBMIT</Text>
+                            </TouchableOpacity>
                         </View>
-                        <View>
-                            <Text style={styles.inputLabel}>BLOOD OXYGEN LEVEL:</Text>
-                            <TextInput
-                                style={styles.input2}>
-                            </TextInput>
-                        </View>
+                        <View style={styles.footer}></View>
                     </View>
-                    <Text style={styles.inputLabel}>HEARTBEAT RATE:</Text>
-                    <TextInput
-                        style={styles.input1}>
-                    </TextInput>
-
-                    <Text style={styles.inputLabel}>ADDITIONAL NOTES:</Text>
-                    <TextInput
-                        style={styles.input3}>
-                    </TextInput>
-                    <View style={styles.buttonGroup}>
-                        <TouchableOpacity
-                            style={styles.buttonStyle}>
-                            <Text style={{ color: '#414142' }}>SUBMIT</Text>
-                        </TouchableOpacity>
-                    </View>
-                    <View style={styles.footer}></View>
-                </ScrollView>
-            </ImageBackground>
-        </View>
-    );
+                </ImageBackground>
+            </View>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
@@ -75,8 +145,8 @@ const styles = StyleSheet.create({
 
     input1: {
         borderWidth: 0.9,
-        width: 350,
-        height: 56,
+        width: 165,
+        height: 45,
         alignSelf: 'center',
         fontWeight: 'bold',
         borderRadius: 10,
@@ -102,6 +172,11 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
     },
 
+    inputStyle1: {
+        justifyContent: 'space-around',
+        flexDirection: 'row'
+    },
+
     input2: {
         borderWidth: 0.9,
         width: 365,
@@ -117,7 +192,7 @@ const styles = StyleSheet.create({
     buttonGroup: {
         flexDirection: 'row',
         justifyContent: 'space-evenly',
-        marginTop: 10,
+        marginTop: 60,
     },
 
     buttonStyle: {
@@ -133,5 +208,5 @@ const styles = StyleSheet.create({
 
     footer: {
         marginTop: 110,
-      }
+    }
 });

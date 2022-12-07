@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginScreen snapShot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FCFFD3",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "color": "#414142",
+        "fontSize": 18,
+        "marginTop": 20,
+      }
+    }
+  >
+    <Image
+      source={1}
+    />
+  </View>
+  <Text
+    style={
+      Object {
+        "alignSelf": "center",
+        "color": "#414142",
+        "fontSize": 18,
+        "marginTop": 20,
+      }
+    }
+  >
+     Welcome to
+  </Text>
+  <Text
+    style={
+      Object {
+        "alignSelf": "center",
+        "color": "#414142",
+        "fontSize": 28,
+        "marginTop": 10,
+      }
+    }
+  >
+    CENTENNIAL CARE
+  </Text>
+  <View
+    style={
+      Object {
+        "flex": 0.5,
+        "flexDirection": "column",
+        "justifyContent": "space-evenly",
+        "marginTop": 30,
+        "padding": 16,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "#414142",
+          "fontSize": 20,
+          "justifyContent": "center",
+          "marginBottom": 10,
+        }
+      }
+    >
+       Login Below 
+    </Text>
+    <TextInput
+      onChangeText={[Function]}
+      placeholder="Username"
+      style={
+        Object {
+          "alignSelf": "center",
+          "backgroundColor": "#ECEDF0",
+          "borderRadius": 100,
+          "borderWidth": 0.9,
+          "color": "#414142",
+          "fontWeight": "bold",
+          "height": 56,
+          "padding": 5,
+          "paddingLeft": 30,
+          "width": 327,
+        }
+      }
+      value=""
+    />
+    <TextInput
+      onChangeText={[Function]}
+      placeholder="Password"
+      secureTextEntry={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "backgroundColor": "#ECEDF0",
+          "borderRadius": 100,
+          "borderWidth": 0.9,
+          "color": "#414142",
+          "fontWeight": "bold",
+          "height": 56,
+          "padding": 5,
+          "paddingLeft": 30,
+          "width": 327,
+        }
+      }
+      value=""
+    />
+  </View>
+  <View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#D4DF38",
+          "borderColor": "#D4DF38",
+          "borderRadius": 100,
+          "borderWidth": 0.9,
+          "fontWeight": "bold",
+          "height": 56,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 327,
+        }
+      }
+    >
+      <Text>
+        LOGIN
+      </Text>
+    </View>
+  </View>
+</View>
+`;

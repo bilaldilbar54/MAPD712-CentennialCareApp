@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MonitorRecordScreen snapShot 1`] = `
+<View
+  accessibilityIgnoresInvertColors={true}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <Image
+    source={1}
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "height": undefined,
+          "width": undefined,
+        },
+        undefined,
+      ]
+    }
+  />
+  <Text
+    style={
+      Object {
+        "color": "#414142",
+        "fontSize": 31,
+        "marginLeft": 10,
+        "marginTop": 10,
+      }
+    }
+  >
+    MONITOR RECORDS:
+  </Text>
+  <Text
+    style={
+      Object {
+        "marginLeft": 13,
+        "marginTop": 26,
+      }
+    }
+  >
+    ENTER PATIENT NAME:
+  </Text>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#D4DF38",
+        "borderRadius": 10,
+        "borderWidth": 0.9,
+        "flexDirection": "row",
+        "height": 46,
+        "marginBottom": 2,
+        "marginLeft": 10,
+        "marginTop": 10,
+        "width": 320,
+      }
+    }
+  >
+    <TextInput
+      onChangeText={[Function]}
+      placeholder="Richard Louis"
+      style={
+        Object {
+          "color": "#414142",
+          "paddingLeft": 14,
+          "width": 280,
+        }
+      }
+      value=""
+    />
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={false}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+          "paddingLeft": 0,
+          "paddingTop": 10,
+        }
+      }
+    >
+      <Text />
+    </View>
+  </View>
+  <View>
+    <RCTScrollView
+      data={Array []}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      keyExtractor={[Function]}
+      onContentSizeChange={[Function]}
+      onLayout={[Function]}
+      onMomentumScrollBegin={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      viewabilityConfigCallbackPairs={Array []}
+    >
+      <View />
+    </RCTScrollView>
+  </View>
+  <View
+    style={
+      Object {
+        "marginTop": 110,
+      }
+    }
+  />
+</View>
+`;

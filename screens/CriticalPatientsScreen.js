@@ -1,72 +1,65 @@
 import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, ScrollView, FlatList } from 'react-native';
 
-export default function CriticalPatient() {
-  return (
-    <ImageBackground source={require('../assets/background_image.png')} style={styles.container}>
-      <Text style={styles.heading}>CRITICAL PATIENTS:</Text>
-      <Text style={styles.textLabel}>FOLLOWING PATIENTS NEEDS ATTENTION:</Text>
-      <ScrollView>
-        <View style={styles.criticalInfo}>
-          <Text style={styles.patientId}>PATIENT - 101009</Text>
-          <Text style={styles.patientName}>RICHARD BENSAN</Text>
-          <Text style={styles.criticalTextLabel}>CRITICAL POINTS: </Text>
-          <Text style={styles.textStyle}>BLOOD PRESSURE:
-            <Text style={{ color: 'red' }}> HIGH</Text>
-          </Text>
-          <Text style={styles.textStyle}>SUGAR LEVEL:
-            <Text style={{ color: 'red' }}> HIGHER THAN NORMAL</Text>
-          </Text>
-          <Text style={styles.textStyle}>POSITION:
-            <Text style={{ fontWeight: '900' }}> ROOM# C410</Text>
-          </Text>
+export default class CriticalPatient extends React.Component {
+
+  constructor(props) {
+    super(props);
+    const { route } = this.props;
+
+    this.state = {
+      data: [],
+    }
+  }
+
+  componentDidMount() {
+    this.fetchPatientsData();
+  }
+
+  fetchPatientsData = async () => {
+    fetch(`http://192.168.0.194:5000/patients/tests`)
+      .then(response => response.json())
+      .then((jsonResponse) => { this.setState({ tests: jsonResponse}) })
+      .catch(error => console.log(error))
+  }
+
+  renderItem = (data) => {
+    if (data.item.respiratoryRate > 150 || data.item.respiratoryRate < 12 || data.item.bloodOxygenLevel < 94 || data.item.bloodOxygenLevel > 102 
+      || data.item.systolic > 140 || data.item.systolic < 100 || data.item.diastolic > 100 || data.item.diastolic < 60 || data.item.heartBeatRate > 85
+      || data.item.heartBeatRate < 65 ) {
+    
+    return(
+      <View style={styles.criticalInfo}>
+          <ScrollView>
+            <Text style={styles.patientName}>NAME: {data.item.firstName} {data.item.lastName}</Text>
+            <Text style={styles.textStyle}>NURSE: {data.item.nurseName}</Text>
+            <Text style={styles.textStyle}>BLOOD PRESSURE: {data.item.systolic} / {data.item.diastolic}mm HG</Text>
+            <Text style={styles.textStyle}>RESPIRATORY RATE: {data.item.respiratoryRate} breaths/min</Text>
+            <Text style={styles.textStyle}>BLOOD OXYGEN LEVEL: {data.item.bloodOxygenLevel}mm HG</Text>
+            <Text style={styles.textStyle}>HEARTBEAT RATE: {data.item.heartBeatRate} beats/min</Text>
+            <Text style={styles.textStyle}>STATUS: 
+              <Text style={{color: 'red'}}> CRITICAL</Text>
+            </Text>
+            <Text style={styles.textStyle}>WARD: {data.item.ward}</Text>
+          </ScrollView>
         </View>
-        <View style={styles.criticalInfo}>
-          <Text style={styles.patientId}>PATIENT - 100205</Text>
-          <Text style={styles.patientName}>ALEX LEO</Text>
-          <Text style={styles.criticalTextLabel}>CRITICAL POINTS: </Text>
-          <Text style={styles.textStyle}>HEARTBEAT RATE:
-            <Text style={{ color: 'red' }}> LOW</Text>
-          </Text>
-          <Text style={styles.textStyle}>RESPIRATORY RATE:
-            <Text style={{ color: 'red' }}> LOW</Text>
-          </Text>
-          <Text style={styles.textStyle}>POSITION:
-            <Text style={{ fontWeight: '900' }}> INTENSIVE CARE UNIT (ICU)</Text>
-          </Text>
-        </View>
-        <View style={styles.criticalInfo}>
-          <Text style={styles.patientId}>PATIENT - 101050</Text>
-          <Text style={styles.patientName}>OLIVER GRACE</Text>
-          <Text style={styles.criticalTextLabel}>CRITICAL POINTS: </Text>
-          <Text style={styles.textStyle}>BLOOD PRESSURE:
-            <Text style={{ color: 'red' }}> HIGH</Text>
-          </Text>
-          <Text style={styles.textStyle}>HEARTBEAT RATE:
-            <Text style={{ color: 'red' }}> HIGH</Text>
-          </Text>
-          <Text style={styles.textStyle}>POSITION:
-            <Text style={{ fontWeight: '900' }}> SURGERY WARD - S12</Text>
-          </Text>
-        </View>
-        <View style={styles.criticalInfo}>
-          <Text style={styles.patientId}>PATIENT - 101089</Text>
-          <Text style={styles.patientName}>LILLY GEORGE</Text>
-          <Text style={styles.criticalTextLabel}>CRITICAL POINTS: </Text>
-          <Text style={styles.textStyle}>BLOOD OXYGEN LEVEL:
-            <Text style={{ color: 'red' }}> LOW</Text>
-          </Text>
-          <Text style={styles.textStyle}>HEARTBEAT:
-            <Text style={{ color: 'red' }}> HIGH</Text>
-          </Text>
-          <Text style={styles.textStyle}>POSITION:
-            <Text style={{ fontWeight: '900' }}> -</Text>
-          </Text>
-        </View>
+    )
+  }
+}
+
+  render() {
+    return (
+      <ImageBackground source={require('../assets/background_image.png')} style={styles.container}>
+        <Text style={styles.heading}>CRITICAL PATIENTS:</Text>
+        <Text style={styles.textLabel}>FOLLOWING PATIENTS NEEDS ATTENTION:</Text>
+        <FlatList
+            data={this.state.tests}
+            keyExtractor={item => item._id}
+            renderItem={item => this.renderItem(item)} />
         <View style={styles.footer}></View>
-      </ScrollView>
-    </ImageBackground>
-  );
+      </ImageBackground>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
@@ -83,20 +76,21 @@ const styles = StyleSheet.create({
 
   textLabel: {
     marginLeft: 17,
-    marginTop: 35,
+    marginTop: 10,
     marginBottom: 5,
+    fontWeight: 'bold',
   },
 
   criticalInfo: {
     borderWidth: 0.9,
     backgroundColor: '#D4DF38',
-    height: 170,
+    marginTop: 20,
+    marginLeft: 10,
+    height: 200,
     width: 360,
     borderRadius: 10,
-    paddingLeft: 5,
-    paddingTop: 15,
-    justifyContent: 'center',
-    alignSelf: 'center'
+    paddingLeft: 14,
+    paddingTop: 6,
   },
 
   patientId: {
@@ -156,6 +150,6 @@ const styles = StyleSheet.create({
   },
 
   footer: {
-    marginTop: 110,
+    marginTop: 20,
   }
 });

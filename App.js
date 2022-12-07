@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, View} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Login from './screens/LoginScreen';
@@ -9,6 +9,7 @@ import MonitorRecords from './screens/MonitorRecordScreen';
 import CriticalPatient from './screens/CriticalPatientsScreen';
 import AddPatientTest from './screens/AddTest';
 import AddPatients from './screens/AddPatients';
+import MonitorPatient from './screens/MonitorPatientsScreen';
 
 
 const Stack = createStackNavigator();
@@ -24,8 +25,10 @@ export default function App() {
             options={{title: 'CENTENNIAL-CARE HOME', headerStyle: {backgroundColor: '#D4DF38'}, headerTintColor: '#414142', headerLeft: null, gestureEnabled: false}}/>
           <Stack.Screen name="FindPatient" component={FindPatient}
             options={{title: '', headerStyle: {backgroundColor: '#D4DF38'}, headerBackTitle: 'Home', headerBackTitleStyle: {color: '#414142'}, headerTintColor: '#414142'}}/>
-          <Stack.Screen name="MonitorRecord" component={MonitorRecords}
+          <Stack.Screen name="MonitorRecords" component={MonitorRecords}
             options={{title: '', headerStyle: {backgroundColor: '#D4DF38'}, headerBackTitle: 'Home', headerBackTitleStyle: {color: '#414142'}, headerTintColor: '#414142'}}/>
+          <Stack.Screen name="MonitorPatient" component={MonitorPatient}
+            options={{title: '', headerStyle: {backgroundColor: '#D4DF38'}, headerBackTitle: '', headerBackTitleStyle: {color: '#414142'}, headerTintColor: '#414142'}}/>
           <Stack.Screen name="CriticalPatient" component={CriticalPatient}
             options={{title: '', headerStyle: {backgroundColor: '#D4DF38'}, headerBackTitle: 'Home', headerBackTitleStyle: {color: '#414142'}, headerTintColor: '#414142'}}/>
           <Stack.Screen name="AddTest" component={AddPatientTest}

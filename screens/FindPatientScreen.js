@@ -1,30 +1,29 @@
 import React from "react";
-import { View, Text, StyleSheet, FlatList, TextInput, ImageBackground, ScrollView, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, FlatList, TextInput, ImageBackground, ScrollView } from "react-native";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default class FindPatient extends React.Component {
 
   constructor(props) {
     super(props);
-  
+
     this.state = {
       data: [],
       searchPatient: ''
     }
   }
-  
+
   componentDidMount() {
-    this.fetchUsersData();
+    this.fetchPatientsData();
   }
 
-  fetchUsersData = async () => {
-    fetch("https://enterprise-healthrecords-api.herokuapp.com/patients")
+  fetchPatientsData = async () => {
+    fetch("http://192.168.0.194:5000/patients")
       .then(response => response.json())
       .then((jsonResponse) => { this.setState({ data: jsonResponse }) })
       .catch(error => console.log(error))
   }
 
-  
 
   renderItem = (data) => {
     if (this.state.searchPatient === "") {
@@ -48,7 +47,7 @@ export default class FindPatient extends React.Component {
       )
     }
 
-    if (data.item.patientId.includes(this.state.searchPatient) || data.item.firstName.includes(this.state.searchPatient) || data.item.lastName.includes(this.state.searchPatient)) {
+    if (data.item.firstName.includes(this.state.searchPatient) || data.item.lastName.includes(this.state.searchPatient)) {
       return (
         <View style={styles.patientInfo}>
           <Text style={styles.patientId}>PATIENT ID: {data.item.patientId}</Text>
@@ -75,7 +74,7 @@ export default class FindPatient extends React.Component {
           <View style={styles.searchBar}>
             <TextInput
               style={styles.input}
-              placeholder='Enter Patient Name/Id'
+              placeholder='Enter Patient Name'
               value={this.state.searchPatient}
               onChangeText={(text) => this.setState({ searchPatient: text })}>
             </TextInput>

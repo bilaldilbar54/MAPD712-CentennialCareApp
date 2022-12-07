@@ -1,0 +1,471 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeScreen snapShot 1`] = `
+<View
+  accessibilityIgnoresInvertColors={true}
+  style={
+    Object {
+      "backgroundColor": "#FCFFD3",
+      "flex": 1,
+    }
+  }
+>
+  <Image
+    source={1}
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "height": undefined,
+          "width": undefined,
+        },
+        undefined,
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "backgroundColor": "#414142",
+        "borderRadius": 20,
+        "flex": 0.5,
+        "marginBottom": 20,
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "marginTop": 25,
+        }
+      }
+    >
+      <Image
+        source={1}
+      />
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "#BBC71C",
+              "fontSize": 24,
+              "marginLeft": 10,
+              "marginTop": 10,
+            }
+          }
+        >
+          Good Morning! 
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#BBC71C",
+              "fontSize": 32,
+              "marginLeft": 10,
+              "marginTop": 10,
+            }
+          }
+        >
+          Dr. David Mason 
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "center",
+          "borderColor": "#414142",
+          "borderRadius": 20,
+          "height": 220,
+          "marginTop": 15,
+          "overflow": "hidden",
+          "width": 370,
+        }
+      }
+    >
+      <View
+        accessibilityIgnoresInvertColors={true}
+        style={
+          Object {
+            "alignSelf": "center",
+            "borderColor": "#414142",
+            "borderRadius": 20,
+            "height": 220,
+            "marginTop": 15,
+            "overflow": "hidden",
+            "width": 370,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "height": 220,
+                "width": 370,
+              },
+              undefined,
+            ]
+          }
+        />
+        <Text
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "#414142",
+              "fontSize": 23,
+              "paddingTop": 15,
+            }
+          }
+        >
+          How are you feeling
+        </Text>
+        <Text
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "#414142",
+              "fontSize": 23,
+              "paddingTop": 15,
+            }
+          }
+        >
+          today?
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-around",
+              "marginTop": 10,
+              "padding": 20,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#fff",
+                }
+              }
+            >
+              Relaxed
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#fff",
+                }
+              }
+            >
+              Stressed
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#fff",
+                }
+              }
+            >
+              Sick
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-evenly",
+        "marginTop": 200,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#D4DF38",
+          "borderColor": "#D4DF38",
+          "borderRadius": 100,
+          "height": 90,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 90,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#414142",
+            "textAlign": "center",
+          }
+        }
+      >
+        ADD PATIENTS
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#D4DF38",
+          "borderColor": "#D4DF38",
+          "borderRadius": 100,
+          "height": 90,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 90,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#414142",
+            "textAlign": "center",
+          }
+        }
+      >
+        VIEW PATIENTS
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#D4DF38",
+          "borderColor": "#D4DF38",
+          "borderRadius": 100,
+          "height": 90,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 90,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#414142",
+            "textAlign": "center",
+          }
+        }
+      >
+        MONITOR RECORDS
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-evenly",
+        "marginTop": 20,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#D4DF38",
+          "borderColor": "#D4DF38",
+          "borderRadius": 80,
+          "height": 100,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 125,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#414142",
+            "textAlign": "center",
+          }
+        }
+      >
+        CRITICAL PATIENTS
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#D4DF38",
+          "borderColor": "#D4DF38",
+          "borderRadius": 80,
+          "height": 100,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 125,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#414142",
+            "textAlign": "center",
+          }
+        }
+      >
+        LOGOUT
+      </Text>
+    </View>
+  </View>
+</View>
+`;

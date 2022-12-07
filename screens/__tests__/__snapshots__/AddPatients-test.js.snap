@@ -1,0 +1,1117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddPatients snapShot 1`] = `
+<View
+  accessibilityIgnoresInvertColors={true}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <Image
+    source={1}
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "height": undefined,
+          "width": undefined,
+        },
+        undefined,
+      ]
+    }
+  />
+  <Text
+    style={
+      Object {
+        "color": "#414142",
+        "fontSize": 31,
+        "marginLeft": 10,
+        "marginTop": 10,
+      }
+    }
+  >
+    PATIENT ADDITION FORM:
+  </Text>
+  <RCTScrollView>
+    <View>
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#414142",
+            "fontWeight": "700",
+            "marginTop": 15,
+          }
+        }
+      >
+        PATIENT ID:
+      </Text>
+      <TextInput
+        onChangeText={[Function]}
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "#D4DF38",
+            "borderRadius": 10,
+            "borderWidth": 0.9,
+            "color": "#414142",
+            "fontWeight": "bold",
+            "height": 45,
+            "paddingLeft": 5,
+            "width": 350,
+          }
+        }
+        value=""
+      />
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+          }
+        }
+      >
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            FIRST NAME:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="e.g Richard"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            LAST NAME:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="e.g Louis"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+          }
+        }
+      >
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            AGE:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="e.g 35"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            GENDER:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="i.e Male/Female"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+          }
+        }
+      >
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            WEIGHT:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="e.g 80Kg"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            REPORT:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="e.g Heart Disease"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+          }
+        }
+      >
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            ADDRESS:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="e.g. 329 Yonge Street"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            PHONE NUMBER:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="e.g. 644-877-5489"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+          }
+        }
+      >
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            DATE OF BIRTH:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="e.g 10/12/1995"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            DOCTOR:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="e.g. Dr. Lee"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+      </View>
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#414142",
+            "fontWeight": "700",
+            "marginTop": 15,
+          }
+        }
+      >
+        WARD ASSIGNMENT:
+      </Text>
+      <TextInput
+        onChangeText={[Function]}
+        placeholder="i.e. WARD A - Room: A123"
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "#D4DF38",
+            "borderRadius": 10,
+            "borderWidth": 0.9,
+            "color": "#414142",
+            "fontWeight": "bold",
+            "height": 45,
+            "paddingLeft": 5,
+            "width": 350,
+          }
+        }
+        value=""
+      />
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+            "marginTop": 30,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#D4DF38",
+              "borderColor": "#D4DF38",
+              "borderRadius": 25,
+              "borderWidth": 0.9,
+              "height": 45,
+              "justifyContent": "center",
+              "opacity": 1,
+              "width": 165,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#414142",
+              }
+            }
+          >
+            CANCEL
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#D4DF38",
+              "borderColor": "#D4DF38",
+              "borderRadius": 25,
+              "borderWidth": 0.9,
+              "height": 45,
+              "justifyContent": "center",
+              "opacity": 1,
+              "width": 165,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#414142",
+              }
+            }
+          >
+            SUBMIT
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "marginTop": 40,
+          }
+        }
+      />
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`HomeScreen snapShot 1`] = `
+<View
+  accessibilityIgnoresInvertColors={true}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <Image
+    source={1}
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "height": undefined,
+          "width": undefined,
+        },
+        undefined,
+      ]
+    }
+  />
+  <Text
+    style={
+      Object {
+        "color": "#414142",
+        "fontSize": 31,
+        "marginLeft": 10,
+        "marginTop": 10,
+      }
+    }
+  >
+    PATIENT ADDITION FORM:
+  </Text>
+  <RCTScrollView>
+    <View>
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#414142",
+            "fontWeight": "700",
+            "marginTop": 15,
+          }
+        }
+      >
+        PATIENT ID:
+      </Text>
+      <TextInput
+        onChangeText={[Function]}
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "#D4DF38",
+            "borderRadius": 10,
+            "borderWidth": 0.9,
+            "color": "#414142",
+            "fontWeight": "bold",
+            "height": 45,
+            "paddingLeft": 5,
+            "width": 350,
+          }
+        }
+        value=""
+      />
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+          }
+        }
+      >
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            FIRST NAME:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="e.g Richard"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            LAST NAME:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="e.g Louis"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+          }
+        }
+      >
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            AGE:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="e.g 35"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            GENDER:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="i.e Male/Female"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+          }
+        }
+      >
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            WEIGHT:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="e.g 80Kg"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            REPORT:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="e.g Heart Disease"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+          }
+        }
+      >
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            ADDRESS:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="e.g. 329 Yonge Street"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            PHONE NUMBER:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="e.g. 644-877-5489"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+          }
+        }
+      >
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            DATE OF BIRTH:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="e.g 10/12/1995"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+        <View>
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#414142",
+                "fontWeight": "700",
+                "marginTop": 15,
+              }
+            }
+          >
+            DOCTOR:
+          </Text>
+          <TextInput
+            onChangeText={[Function]}
+            placeholder="e.g. Dr. Lee"
+            style={
+              Object {
+                "alignSelf": "center",
+                "backgroundColor": "#D4DF38",
+                "borderRadius": 10,
+                "borderWidth": 0.9,
+                "color": "#414142",
+                "fontWeight": "bold",
+                "height": 45,
+                "paddingLeft": 5,
+                "width": 165,
+              }
+            }
+            value=""
+          />
+        </View>
+      </View>
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#414142",
+            "fontWeight": "700",
+            "marginTop": 15,
+          }
+        }
+      >
+        WARD ASSIGNMENT:
+      </Text>
+      <TextInput
+        onChangeText={[Function]}
+        placeholder="i.e. WARD A - Room: A123"
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "#D4DF38",
+            "borderRadius": 10,
+            "borderWidth": 0.9,
+            "color": "#414142",
+            "fontWeight": "bold",
+            "height": 45,
+            "paddingLeft": 5,
+            "width": 350,
+          }
+        }
+        value=""
+      />
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-evenly",
+            "marginTop": 30,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#D4DF38",
+              "borderColor": "#D4DF38",
+              "borderRadius": 25,
+              "borderWidth": 0.9,
+              "height": 45,
+              "justifyContent": "center",
+              "opacity": 1,
+              "width": 165,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#414142",
+              }
+            }
+          >
+            CANCEL
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#D4DF38",
+              "borderColor": "#D4DF38",
+              "borderRadius": 25,
+              "borderWidth": 0.9,
+              "height": 45,
+              "justifyContent": "center",
+              "opacity": 1,
+              "width": 165,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#414142",
+              }
+            }
+          >
+            SUBMIT
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "marginTop": 40,
+          }
+        }
+      />
+    </View>
+  </RCTScrollView>
+</View>
+`;

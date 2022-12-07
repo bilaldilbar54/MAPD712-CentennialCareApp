@@ -23,7 +23,7 @@ export default class AddPatients extends React.Component {
   }
 
   postPatientsData = async () => {
-    fetch("https://enterprise-healthrecords-api.herokuapp.com/patients", {
+    fetch("http://192.168.0.194:5000/patients", {
       method: 'POST',
       headers: {
         Accept: 'application/json',

@@ -89,7 +89,7 @@ function sickEmoji(){
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonStyle}
-          onPress={() => navigation.navigate('MonitorRecord')}>
+          onPress={() => navigation.navigate('MonitorRecords')}>
           <Text style={styles.buttonText}>MONITOR RECORDS</Text>
         </TouchableOpacity>
       </View>
